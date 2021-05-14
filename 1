@@ -1,7 +1,5 @@
 def q(a, b, c):
     return a and b and c
-def imp(d, e):
-    return d and e
 print("x y z w    f")
 for x in (True, False):
     for y in (True, False):
@@ -9,9 +7,8 @@ for x in (True, False):
             for w in (True, False):
                 q1 = (x or (not z))
                 q2 = (x == (not w))
-                q3 = imp(x, y)
+                q3 = (not x or y)
                 f = q(q1, q2, q3)
                 n = 0
                 if f == 1:
                     print(int(x), int(y), int(z), int(w), "  ", int(f))
-
