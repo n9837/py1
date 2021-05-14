@@ -1,25 +1,17 @@
 def q(a, b, c):
-    return a or b or c
+    return a and b and c
 def imp(d, e):
     return d and e
-print("x y z w   f")
+print("x y z w    f")
 for x in (True, False):
     for y in (True, False):
         for z in (True, False):
             for w in (True, False):
-                q1 = (x and (not z))
+                q1 = (x or (not z))
                 q2 = (x == (not w))
                 q3 = imp(x, y)
                 f = q(q1, q2, q3)
                 n = 0
                 if f == 1:
-                    if int(x) == 1:
-                        n = n + 1
-                    if int(y) == 1:
-                        n = n + 1
-                    if int(z) == 1:
-                        n = n + 1
-                    if int(w) == 1:
-                        n = n + 1
-                    if n >= 3:
-                            print(int(x), int(y), int(z), int(w), "  ", int(f))
+                    print(int(x), int(y), int(z), int(w), "  ", int(f))
+
